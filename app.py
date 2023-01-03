@@ -283,7 +283,7 @@ def predict():
             d_Kolkata]])
 
         output = round(output[0],2)
-        return render_template('home.html',predictions='Dự đoán giá vé bạn sẽ phải trả là {} IDR'.format(output))
+        return render_template('home.html',predictions='Dự đoán giá vé bạn sẽ phải trả là {} INR'.format(output))
 
 
 if __name__ == '__main__':
