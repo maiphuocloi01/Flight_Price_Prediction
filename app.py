@@ -3,7 +3,7 @@ from flask_cors import cross_origin
 import pickle
 import pandas as pd
 
-model = pickle.load(open('flight_rf.pkl','rb'))
+model = pickle.load(open('flight_rf2.pkl','rb'))
 
 app = Flask(__name__)
 
@@ -283,7 +283,7 @@ def predict():
             d_Kolkata]])
 
         output = round(output[0],2)
-        return render_template('home.html',predictions='You will have to Pay approx Rs. {}'.format(output))
+        return render_template('home.html',predictions='Dự đoán giá vé bạn sẽ phải trả là {} IDR'.format(output))
 
 
 if __name__ == '__main__':
