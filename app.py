@@ -3,7 +3,7 @@ from flask_cors import cross_origin
 import pickle
 import pandas as pd
 
-model = pickle.load(open('flight_rf2.pkl','rb'))
+model = pickle.load(open('flight_rf1.pkl','rb'))
 
 app = Flask(__name__)
 
