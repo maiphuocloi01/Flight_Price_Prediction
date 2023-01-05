@@ -5,8 +5,7 @@ import pandas as pd
 
 model = pickle.load(open('flight_rf1.pkl','rb'))
 
-application = Flask(__name__)
-app = application
+app = Flask(__name__)
 
 @app.route('/')
 @cross_origin()
@@ -288,4 +287,5 @@ def predict():
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    #app.run(debug=True)
+    app.run(host='0.0.0.0', port=80, debug=True)
