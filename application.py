@@ -5,7 +5,7 @@ import pandas as pd
 
 model = pickle.load(open('flight_rf1.pkl','rb'))
 
-app = Flask(__name__)
+application = app = Flask(__name__)
 
 @app.route('/')
 @cross_origin()
